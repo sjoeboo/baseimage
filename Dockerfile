@@ -4,6 +4,6 @@ RUN yum -y localinstall http://pkgs.repoforge.org/rpmforge-release/rpmforge-rele
     yum -y localinstall https://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm &&\
     yum -y update &&\
     yum -y install vim tmux ruby ruby-devel rubygems puppet git supervisord && \
-    yum clean all
-
+    yum clean all &&\
+    gem install librarian-puppet
 
