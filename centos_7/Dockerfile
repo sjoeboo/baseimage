@@ -3,7 +3,8 @@ RUN yum -y localinstall http://pkgs.repoforge.org/rpmforge-release/rpmforge-rele
     yum -y localinstall https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm &&\
     yum -y localinstall https://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm &&\
     yum -y update &&\
-    yum -y install vim tmux ruby ruby-devel rubygems puppet git supervisord && \
+    yum -y install vim tmux ruby ruby-devel rubygems puppet git supervisord mosh && \
     yum clean all &&\
     gem install librarian-puppet
 
+ENV PATH "$PATH:/opt/puppetlabs/puppet/bin/"
